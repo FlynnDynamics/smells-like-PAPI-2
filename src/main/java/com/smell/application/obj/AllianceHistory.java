@@ -1,6 +1,14 @@
 package com.smell.application.obj;
 
 public class AllianceHistory {
+
+    /**
+     *
+     * @author  FlynnDynamics
+     * @version 0.x
+     * @since   24/04/24
+     */
+
     private int alliance_id;
     private int record_id;
     private String start_date;

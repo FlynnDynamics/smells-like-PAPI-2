@@ -2,6 +2,13 @@ package com.smell.application.obj;
 
 public class CorporationHistory {
 
+    /**
+     *
+     * @author  FlynnDynamics
+     * @version 0.x
+     * @since   24/04/24
+     */
+
     private int corporation_id;
     private boolean is_deleted;
     private int record_id;

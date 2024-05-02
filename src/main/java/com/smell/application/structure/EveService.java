@@ -9,6 +9,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/**
+ *
+ * @author  FlynnDynamics
+ * @version 0.x
+ * @since   24/04/24
+ */
+
 public class EveService {
 
     private final HttpClient client;
@@ -94,6 +101,8 @@ public class EveService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response);
         return gson.fromJson(response.body(), responseType);
     }
 }

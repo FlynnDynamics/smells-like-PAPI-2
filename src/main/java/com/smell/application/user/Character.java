@@ -3,6 +3,14 @@ package com.smell.application.user;
 import java.util.List;
 
 public class Character {
+
+    /**
+     *
+     * @author  FlynnDynamics
+     * @version 0.x
+     * @since   24/04/24
+     */
+
     private long id;
     private String name;
     private List<Corporation> corporations;
