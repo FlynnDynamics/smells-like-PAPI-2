@@ -47,7 +47,15 @@ footer, .footer-layout {
 .ascii-banner {
     white-space: pre;
     font-family: monospace;
+    position: absolute;
+    z-index: 1000;
     pointer-events: none;
     user-select: none;
+    display: none;
 }
 
+@media (min-width: 1200px) {
+    .ascii-banner {
+        display: block !important;
+    }
+}
