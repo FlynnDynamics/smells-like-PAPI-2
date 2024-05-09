@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.smell.application"},{"l":"com.smell.application.obj"},{"l":"com.smell.application.search"},{"l":"com.smell.application.structure"},{"l":"com.smell.application.structure.res"},{"l":"com.smell.application.user"},{"l":"com.smell.application.views"}];updateSearchResults();
