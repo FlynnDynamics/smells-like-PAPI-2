@@ -19,10 +19,10 @@ The full version of "Smells Like Papi 2" is available only upon request to ensur
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Contact
 
 For access to the full version or for any inquiries:
-- **Email:** [contact@yourdomain.com](mailto:contact@yourdomain.com)
-- **Website:** [https://www.yourwebsite.com](https://www.yourwebsite.com)
+- **Email:** [sindri.weinstein+git@gmail.com](mailto:sindri.weinstein+git@gmail)
+
