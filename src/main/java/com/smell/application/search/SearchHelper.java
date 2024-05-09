@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  * </pre>
  *
  * @author FlynnDynamics
- * @version 0.x
+ * @version ${version}
  * @since 24/04/24
  */
 public class SearchHelper {

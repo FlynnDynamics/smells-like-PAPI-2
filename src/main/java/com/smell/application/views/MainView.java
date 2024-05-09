@@ -42,7 +42,7 @@ import com.vaadin.flow.router.Route;
  * ███ ███  ██   ██ ██   ██ ██   ████ ██ ██   ████  ██████
  *
  * @author FlynnDynamics
- * @version 0.x Temporary implementation for demonstration purposes.
+ * @version ${version} Temporary implementation for demonstration purposes.
  * @since 24/04/24 The date of the first deployment or usage in the project.
  */
 @PageTitle("SLP2")

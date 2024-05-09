@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * The service logs detailed information about parsing errors and operational steps to facilitate debugging and ensure reliable operations.
  *
  * @author FlynnDynamics
- * @version 0.x
+ * @version ${version}
  * @since 24/04/24
  */
 public class ComparisonService {

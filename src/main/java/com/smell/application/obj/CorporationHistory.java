@@ -5,7 +5,7 @@ public class CorporationHistory {
     /**
      *
      * @author  FlynnDynamics
-     * @version 0.x
+     * @version ${version}
      * @since   24/04/24
      */
 

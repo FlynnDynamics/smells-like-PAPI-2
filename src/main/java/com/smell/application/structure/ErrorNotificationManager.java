@@ -8,6 +8,11 @@ import java.util.List;
 
 /**
  * A utility class to manage and display error notifications.
+ * *
+ *
+ * @author FlynnDynamics
+ * @version ${version}
+ * @since 24/04/24
  */
 public class ErrorNotificationManager {
     private static final List<String> messages = new ArrayList<>();

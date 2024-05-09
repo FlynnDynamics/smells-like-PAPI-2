@@ -38,7 +38,7 @@ import java.util.logging.Logger;
  * - Special styling is applied to alliances marked as 'special' to highlight them in the UI.
  *
  * @author FlynnDynamics
- * @version 0.x
+ * @version ${version}
  * @since 24/04/24
  */
 

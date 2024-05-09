@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  * URL, and it displays detailed character information through a CharacterView component.
  *
  * @author FlynnDynamics
- * @version 0.x
+ * @version ${version}
  * @since 24/04/24
  */
 public class MembershipSearchComponent extends VerticalLayout {

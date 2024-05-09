@@ -14,7 +14,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
  * applications with flexible positioning.
  *
  * @author FlynnDynamics
- * @version 0.x
+ * @version ${version}
  * @since 24/04/24
  */
 public class AsciiBannerComponent extends VerticalLayout {

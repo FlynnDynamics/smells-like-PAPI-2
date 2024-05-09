@@ -10,7 +10,7 @@ public class EveData {
      * The data is stored statically, allowing easy access from various parts of the application without needing to instantiate the class.
      *
      * @author FlynnDynamics
-     * @version 0.x
+     * @version ${version}
      * @since 24/04/24
      */
 
