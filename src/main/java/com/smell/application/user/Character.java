@@ -1,5 +1,6 @@
 package com.smell.application.user;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
