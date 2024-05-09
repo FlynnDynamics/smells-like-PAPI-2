@@ -3,7 +3,7 @@
 ## Overview
 
 "Smells Like Papi 2" is an advanced character analysis tool for the EVE Online universe, focusing on delivering in-depth insights into character affiliations within the game. This repository contains the limited edition of the tool, which exclusively features the "Membership Search" functionality.
-
+- **[Documentation](https://flynndynamics.github.io/smells-like-PAPI-2/)**
 ## Features
 
 - **Membership Search**
@@ -25,5 +25,4 @@ This project is licensed under the MIT License.
 
 For access to the full version or for any inquiries:
 - **Email:** [sindri.weinstein+git@gmail.com](mailto:sindri.weinstein+git@gmail)
-- **[Documentation](https://flynndynamics.github.io/smells-like-PAPI-2/)**
 
