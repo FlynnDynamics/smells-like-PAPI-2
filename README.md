@@ -25,4 +25,5 @@ This project is licensed under the MIT License.
 
 For access to the full version or for any inquiries:
 - **Email:** [sindri.weinstein+git@gmail.com](mailto:sindri.weinstein+git@gmail)
+- **[Documentation](https://flynndynamics.github.io/smells-like-PAPI-2/)**
 
