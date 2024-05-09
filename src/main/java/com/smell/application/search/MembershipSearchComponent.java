@@ -1,6 +1,7 @@
 package com.smell.application.search;
 
 import com.smell.application.structure.CharacterDataService;
+import com.smell.application.structure.ErrorNotificationManager;
 import com.smell.application.structure.EveService;
 import com.smell.application.user.Character;
 import com.smell.application.views.CharacterView;
@@ -18,10 +19,9 @@ import java.util.logging.Logger;
  * MembershipSearchComponent is a VerticalLayout component that provides functionality
  * for searching and displaying EVE Online characters. It uses a TextField for URL input,
  * a Button to trigger the search, and an Image to display the character portrait.
- *
+ * <p>
  * The component integrates with EveService to fetch character data based on the provided
  * URL, and it displays detailed character information through a CharacterView component.
- *
  *
  * @author FlynnDynamics
  * @version 0.x
@@ -106,13 +106,20 @@ public class MembershipSearchComponent extends VerticalLayout {
      * Displays the character information in the UI. Logs the process and handles exceptions.
      *
      * @param id The character ID used to fetch character data.
-     * @throws IOException if there is an error in the network or server communication.
+     * @throws IOException          if there is an error in the network or server communication.
      * @throws InterruptedException if the thread is interrupted while waiting for data.
      */
-    private void processMembership(long id) throws IOException, InterruptedException {
-        Character character = CharacterDataService.getCharacterData(id, eveService);
-        characterView.updateList(character);
-        characterView.setVisible(true);
-        LOGGER.info("Membership processed for character ID: " + id);
+    private void processMembership(long id) {
+        try {
+            Character character = CharacterDataService.getCharacterData(id, eveService);
+            characterView.updateList(character);
+            characterView.setVisible(true);
+            LOGGER.info("Membership processed for character ID: " + id);
+        } catch (IOException | InterruptedException e) {
+            LOGGER.severe("Error fetching character data: " + e.getMessage());
+            Notification.show("Failed to load character data, please try again.");
+        } finally {
+            ErrorNotificationManager.showAndClearMessages();
+        }
     }
 }

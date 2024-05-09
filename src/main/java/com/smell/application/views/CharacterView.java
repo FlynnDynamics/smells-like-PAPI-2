@@ -1,6 +1,7 @@
 package com.smell.application.views;
 
 import com.smell.application.structure.ComparisonService;
+import com.smell.application.structure.ErrorNotificationManager;
 import com.smell.application.user.Alliance;
 import com.smell.application.user.Character;
 import com.smell.application.user.Corporation;
@@ -64,21 +65,21 @@ public class CharacterView extends VerticalLayout {
      * alliances associated with each corporation based on overlapping date ranges.
      */
     private void setupGrid() {
-        try {
-            grid = new Grid<>(Corporation.class, false);
+        grid = new Grid<>(Corporation.class, false);
 
-            grid.addColumn(Corporation::getName).setHeader("Corporation Name").setKey("name");
-            grid.addColumn(Corporation::getId).setHeader("Corporation ID").setKey("id");
-            grid.addColumn(Corporation::getPlayerStartDate).setHeader("Beginn").setKey("playerStartDate");
-            grid.setDetailsVisibleOnClick(false);
-            grid.addColumn(Corporation::getPlayerEndDate).setHeader("Ende").setKey("playerEndDate");
-            grid.setItemDetailsRenderer(new ComponentRenderer<>(corporation -> {
+        grid.addColumn(Corporation::getName).setHeader("Corporation Name").setKey("name");
+        grid.addColumn(Corporation::getId).setHeader("Corporation ID").setKey("id");
+        grid.addColumn(Corporation::getPlayerStartDate).setHeader("Start").setKey("playerStartDate");
+        grid.setDetailsVisibleOnClick(false);
+        grid.addColumn(Corporation::getPlayerEndDate).setHeader("End").setKey("playerEndDate");
+        grid.setItemDetailsRenderer(new ComponentRenderer<>(corporation -> {
+            VerticalLayout layout = new VerticalLayout();
+            layout.addClassName("details-layout");
 
-                VerticalLayout layout = new VerticalLayout();
-                layout.addClassName("details-layout");
+            for (Alliance alliance : corporation.getAlliances()) {
+                if (alliance.getId() == 0) continue;
 
-                for (Alliance alliance : corporation.getAlliances()) {
-                    if (alliance.getId() == 0) continue;
+                try {
                     if (ComparisonService.isTimeWithinRange(corporation.getPlayerStartDate(), corporation.getPlayerEndDate(), alliance.getStartDate(), alliance.getEndDate())) {
                         Span allianceDetails = new Span(String.format("%s; %d; %s; %s",
                                 alliance.getName(), alliance.getId(), alliance.getStartDate(), alliance.getEndDate()));
@@ -90,16 +91,19 @@ public class CharacterView extends VerticalLayout {
 
                         layout.add(allianceDetails);
                     }
+                } catch (IllegalArgumentException e) {
+                    LOGGER.warning("Date comparison error: " + e.getMessage());
+                    ErrorNotificationManager.addErrorMessage("Date comparison error: " + e.getMessage());
+                } catch (Exception e) {
+                    LOGGER.severe("Error setting up the grid: " + e.getMessage());
+                    Notification.show("Failed to set up the grid.", 5000, Notification.Position.BOTTOM_START);
                 }
+            }
 
-                return layout;
-            }));
+            return layout;
+        }));
 
-            grid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
-        } catch (Exception e) {
-            LOGGER.severe("Error setting up the grid: " + e.getMessage());
-            Notification.show("Failed to set up the grid.", 5000, Notification.Position.BOTTOM_START);
-        }
+        grid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
     }
 
     /**
