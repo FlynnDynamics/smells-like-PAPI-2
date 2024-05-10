@@ -2,20 +2,23 @@
 
 ## Overview
 
-"Smells Like Papi 2" is an advanced character analysis tool for the EVE Online universe, focusing on delivering in-depth insights into character affiliations within the game. This repository contains the limited edition of the tool, which exclusively features the "Membership Search" functionality.
+"Smells Like Papi 2" offers advanced tools for analyzing character data in the EVE Online universe. This repository hosts a simplified version of the tool, which is dedicated solely to the "Membership Search" functionality, allowing users to delve into the membership details of EVE characters without the complexity of additional analysis features.
+
 - **[Documentation](https://flynndynamics.github.io/smells-like-PAPI-2/)**
+
 ## Features
 
 - **Membership Search**
-  - Provides comprehensive alliance membership details for EVE Online characters.
-  - User-friendly interface tailored to offer a seamless user experience, focusing solely on alliance searches without the complexity of the full tool suite.
+  - Allows users to query and display the alliance and corporation memberships of EVE Online characters.
+  - Provides a streamlined interface focused solely on membership details, ensuring a user-friendly experience.
+    
+This limited edition is designed for users who require straightforward access to character memberships without the advanced analytics provided by the full suite:
 
 ## Restricted Edition
 
-This streamlined version is tailored for users needing detailed insights into character alliances, excluding the more powerful analytical tools available in the full version:
-- **Character Compare (CCS) Search** and **Advanced Character Search (ACS)** are not included in this edition to maintain simplicity and ease of use.
+- **Character Compare (CCS) Search** and **Advanced Character Search (ACS)**, which are used to identify or compare potential alternate characters owned by the same player, are not included in this edition.
 
-The full version of "Smells Like Papi 2" is available only upon request to ensure the responsible use of its advanced analytical capabilities.
+The full version of "Smells Like Papi 2", which includes these capabilities, is available only upon request to ensure that its powerful analytical features are used responsibly.
 
 ## License
 
@@ -23,6 +26,5 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For access to the full version or for any inquiries:
-- **Email:** [sindri.weinstein+git@gmail.com](mailto:sindri.weinstein+git@gmail)
-
+For access to the full version or any inquiries:
+- **Email:** [sindri.weinstein+git@gmail.com](mailto:sindri.weinstein+git@gmail.com)
