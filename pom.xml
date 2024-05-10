@@ -7,7 +7,7 @@
     <groupId>com.smell.application</groupId>
     <artifactId>smells-like-papi-2</artifactId>
     <name>Smells Like Papi 2</name>
-    <version>0.1.0.-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -24,6 +24,10 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.4</version>
     </parent>
+
+    <organization>
+        <name>FlynnTec</name>
+    </organization>
 
     <repositories>
         <repository>
@@ -124,7 +128,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.smell.application.MainApplication</mainClass>
+                    <mainClass>com.smell.application.Application</mainClass>
                 </configuration>
             </plugin>
 
@@ -228,29 +232,6 @@
                                 <goals>
                                     <goal>stop</goal>
                                 </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>com.akathist.maven.plugins.launch4j</groupId>
-                        <artifactId>launch4j-maven-plugin</artifactId>
-                        <version>2.5.0</version> <!-- Stelle sicher, dass diese Version existiert -->
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>launch4j</goal>
-                                </goals>
-                                <phase>package</phase>
-                                <configuration>
-                                    <headerType>gui</headerType>
-                                    <outfile>target/slp2.exe</outfile>
-                                    <jar>target/smells-like-papi-2.jar</jar>
-                                    <icon>src/main/resources/appIcon.ico</icon>
-                                    <jre>
-                                        <minVersion>1.8.0</minVersion>
-                                    </jre>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
